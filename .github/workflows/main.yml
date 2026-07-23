@@ -1,3 +1,4 @@
+
 name: Deploy to GitHub Pages
 
 on:
@@ -27,14 +28,11 @@ jobs:
           cache: npm
 
       - run: npm ci
-        working-directory: ./pastelecia
-
       - run: npm run build
-        working-directory: ./pastelecia
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./pastelecia/dist
+          path: ./dist
 
   deploy:
     environment:
