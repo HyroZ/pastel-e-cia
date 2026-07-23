@@ -27,11 +27,14 @@ jobs:
           cache: npm
 
       - run: npm ci
+        working-directory: ./pastelecia
+
       - run: npm run build
+        working-directory: ./pastelecia
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./pastelecia/dist
 
   deploy:
     environment:
