@@ -2,12 +2,11 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 export default defineConfig({
+    base: '/pastelecia/',
     plugins: [react()],
-    base: '/pastel-e-cia/',
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url)),
         },
-        base: '/projetos-web',
     },
 });
