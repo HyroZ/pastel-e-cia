@@ -13,7 +13,7 @@ import { NotFound } from '@/pages/NotFound';
 // toasts), por isso envolve os demais.
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/pastel-e-cia">
       <ToastProvider>
         <FavoritesProvider>
           <CartProvider>
